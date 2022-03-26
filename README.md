@@ -10,4 +10,5 @@
 
 ## 代码规范
 
-- 待加
+- eslint
+- prettier
