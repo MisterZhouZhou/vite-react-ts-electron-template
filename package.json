@@ -2,7 +2,8 @@
 	"name": "vite-react-ts-electron-template",
 	"private": true,
 	"version": "0.0.1",
-	"main": "main/index.js",
+	"main": "dist/main/index.js",
+	"description": "description",
 	"scripts": {
 		"dev": "vite",
 		"preview": "vite preview",
@@ -10,9 +11,10 @@
 		"electron": "wait-on tcp:3000 && yarn build:electron && cross-env IS_DEV=true electron .",
 		"build:electron": "tsc -p electron",
 		"build": "tsc && vite build && yarn build:electron",
-		"make:mac": "MAKE_FOR=mac node scripts/make.js",
+		"make:mac": "electron-builder --mac",
 		"make:clear": "rm -rf dist"
 	},
+	"author": "misterzhouzhou <16619930394@163.com>",
 	"dependencies": {
 		"axios": "^0.26.0",
 		"react": "^17.0.2",
